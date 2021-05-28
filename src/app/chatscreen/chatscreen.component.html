@@ -1,0 +1,78 @@
+<div class="chat-container">
+  <div class="head-container">
+    <div class="head-name">
+      <div class="pfp">
+        <img
+          src="../assets/Person=Chris, Skin Tone=White, Posture=1 Happy.png"
+          alt="dante"
+          style="width: 90px"
+        />
+      </div>
+      <div class="name">
+        Dante fingston
+        <div class="circle"></div>
+      </div>
+      <div class="icons-container">
+        <img src="../assets/search-interface-symbol.svg" alt="" style="width: 30px" />
+        <img src="../assets/heart.svg" alt="" style="width: 30px" />
+        <img src="../assets/alarm.svg" alt="" style="width: 30px" />
+      </div>
+    </div>
+  </div>
+
+  <div class="main-chat">
+    <div class="loadin-container" *ngIf="isloading">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+    <div class="container" *ngIf="!isloading">
+    <div class="main-container" *ngFor="let msg of data" >
+      <div class="reciever" *ngIf='msg.from=="reciever"'>
+        <div class="reciever-msg">
+          {{msg.message}}
+        </div>
+      </div>
+      <div class="sender" *ngIf="msg.from=='sender'">
+        <div class="sender-msg">{{msg.message}}</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="reply">
+    <div class="reply-container">
+      <div class="mic-icon">
+        <img src="../assets/mic.svg" alt="" style="width: 24px" />
+      </div>
+      <input
+        type="text"
+        name="message"
+        id="message"
+        placeholder="Write something"
+        class="message"
+      />
+      <div class="attach-icon">
+        <img
+          src="../assets/attach-paperclip-symbol.svg"
+          alt=""
+          style="width: 24px"
+        />
+      </div>
+      <div class="camera-icon">
+        <img src="../assets/photo-camera.svg" alt="" style="width: 29px" />
+      </div>
+      <div class="emoji">
+        <img src="../assets/smile.svg" alt="" style="width: 24px" />
+      </div>
+      <div style="width:0px">
+      <div class="send-btn">
+        <img src="../assets/send-button.svg" alt="" style="width: 24px" />
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
