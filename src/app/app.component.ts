@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'WoobChat';
   isopen = false;
-  issideopen = true;
+  issideopen = false;
   open(){
     this.isopen=!this.isopen
   }

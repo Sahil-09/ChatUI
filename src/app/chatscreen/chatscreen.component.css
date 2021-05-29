@@ -112,7 +112,7 @@
   padding: 0.7vw;
   padding-left: 0.7vw;
   background: rgb(243, 243, 243);
-  border-radius: 30px 0px 0px 30px;
+  border-radius: 5vw 0vw 0vw 5vw;
 }
 
 .mic-icon img {
@@ -323,13 +323,14 @@
     font-size: 3.6vw;
     max-width: 55%;
     margin-bottom: 3vw;
+    border-radius: 2vw 2vw 0vw 2vw;
   }
 
   .send{
     float: left;
     color: rgb(20, 20, 20);
     background: rgb(243, 243, 243);
-    border-radius: 1vw 1vw 1vw 0vw;
+    border-radius: 2vw 2vw 2vw 0vw;
   }
   .reply-container {
     justify-content:unset;
@@ -338,32 +339,32 @@
   }
 
   .mic-icon,.attach-icon,.camera-icon,.emoji{
-    padding:2.5vw
+    padding:2vw
   }
 
   .emoji{
-    padding-right: 6vw;
+    padding-right: 8vw;
   }
 
   .mic-icon img,.attach-icon img,.camera-icon img,.emoji img{
-    width: 6vw;
+    width: 4vw;
   }
 
   .message {
-    width:35%
+    width:60%
   }
   .send-btn{
-    width: 8vw;
-    height: 8vw;
-    padding: 2vw;
-    right: 2.8vw;
+    width: 6vw;
+    height: 6vw;
+    padding: 1vw;
+    right: 6vw;
     border-radius: 8vw;
   }
 
   .send-btn img{
     width: 4vw;
     padding: 1vw;
-    padding-left: 2vw;
+    padding-left: 1.5vw;
   }
 
 }
