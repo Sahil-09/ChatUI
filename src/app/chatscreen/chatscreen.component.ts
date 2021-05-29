@@ -14,7 +14,7 @@ export class ChatscreenComponent implements OnInit {
   data:{from:string,message:string}[]=[]
   isloading:boolean = true;
   ngOnInit(){
-    this.http.get<{from:string,message:string}[]>("http://localhost:3000/").pipe( map(data=>{
+    this.http.get<{from:string,message:string}[]>("http://localhost:3000/chat").pipe( map(data=>{
     let mod=[]
     for(let a of data){
       // console.log(a)

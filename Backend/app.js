@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     next();
   });
 
-app.get('/',(req,res)=>{
+app.get('/chat',(req,res)=>{
     Chat.find().then(data=>{
         res.status(200).send(data)
     }).catch(err=>{
