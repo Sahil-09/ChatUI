@@ -1,5 +1,16 @@
 <div class="container">
-  <app-chatlist></app-chatlist>
-  <app-chatscreen></app-chatscreen>
-  <app-profileview></app-profileview>
+  <div class="burger" (click)="open()" [ngClass]="isopen ? 'close':'none'">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div class="burger dot" (click)="sideopen(null)" [ngClass]="isopen ? 'close':'none'">
+    <div class="bar d"></div>
+    <div class="bar d"></div>
+    <div class="bar d"></div>
+  </div>
+  <div class="backdrop" (click)="isopen=false && sideopen=false" *ngIf="isopen"></div>
+  <app-chatlist  [ngClass]="isopen ? 'open':'none'"></app-chatlist>
+  <app-chatscreen ></app-chatscreen>
+  <app-profileview [ngClass]="issideopen ? 'open':'none'" (closeemit)="sideopen($event)"></app-profileview>
 </div>

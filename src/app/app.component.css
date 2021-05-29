@@ -3,3 +3,134 @@
     display:grid;
     grid-template-columns:22% 56% 22%;
 }
+
+.burger{
+    display:none;
+}
+
+
+@media screen and (max-width:415px){
+    .container{
+        display: block;
+    }
+    app-chatlist{
+        position: fixed;
+        width:60%;
+        z-index: 10;
+        transform: translateX(-60vw);
+        transition: all 0.5s ease;
+    }
+
+    app-profileview{
+        position: fixed;
+        width:100%;
+        top: 0;
+        z-index: 10;
+        transform: translateX(100vw);
+        transition: all 0.5s ease;
+    }
+
+    .open{
+        transform:translateX(0vw)
+    }
+    .close{
+        display:none !important;
+    }
+
+    .burger{
+        display: block;
+        margin: 6vw 1vw;
+        position: fixed;
+        z-index: 2;
+        padding: 7px;
+    }
+
+    .dot{
+        right: 0;
+    }
+
+    .d{
+        height: 3px !important;
+        width: 3px !important;
+    }
+
+    .backdrop{
+        position: fixed;
+        content: '';
+        height:100vh;
+        width: 100vw;
+        backdrop-filter:blur(3px);
+        z-index: 2;
+    }
+
+    .bar{
+    content: '';
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+    background: rgb(170, 170, 170);
+    }
+}
+
+@media screen and (max-width:1024px){
+    .container{
+        display: block;
+    }
+    app-chatlist{
+        position: fixed;
+        width:60%;
+        z-index: 10;
+        transform: translateX(-60vw);
+        transition: all 0.5s ease;
+    }
+
+    app-profileview{
+        position: fixed;
+        width:100%;
+        top: 0;
+        z-index: 10;
+        transform: translateX(100vw);
+        transition: all 0.5s ease;
+    }
+
+    .open{
+        transform:translateX(0vw)
+    }
+    .close{
+        display:none !important;
+    }
+
+    .burger{
+        display: block;
+        margin: 6vw 1vw;
+        position: fixed;
+        z-index: 2;
+        padding: 7px;
+    }
+
+    .dot{
+        right: 0;
+    }
+
+    .d{
+        height: 3px !important;
+        width: 3px !important;
+    }
+
+    .backdrop{
+        position: fixed;
+        content: '';
+        height:100vh;
+        width: 100vw;
+        backdrop-filter:blur(3px);
+        z-index: 2;
+    }
+
+    .bar{
+    content: '';
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+    background: rgb(170, 170, 170);
+    }
+}

@@ -1,6 +1,6 @@
 .profile-container{
     display:grid;
-    grid-template-rows: 50% 8% 42%;
+    grid-template-rows: 48% 10% 42%;
     height:100vh;
     background:#f9f9f9;
 }
@@ -8,13 +8,17 @@
 
 .searchbar input[type='text']{
     width: 100%;
-    border-radius: 0 22px 22px 0;
+    border-radius: 0 1vw 1vw 0;
     border: none;
     outline: none;
 }
 
+.close-icon{
+    display:none;
+}
+
 .searchbar{
-    margin: 0 20px;
+    margin: 0 1vw;
     display:grid;
     grid-template-columns: 10% 90%;
 }
@@ -24,76 +28,77 @@
     width: 100%;
     text-align: center;
     background-color: white;
-    border-radius: 22px 0px 0px 22px;
+    border-radius: 1vw 0px 0px 1vw;
 }
 
 .search-icon{
-    width: 20px;
+    width: 1vw;
     display: flex;
     position: relative;
     text-align: center;
     align-content: center;
     cursor: pointer;
-    padding: 12px;
+    padding: 0.6vw;
     filter: invert(0.5);
 }
 
 
 
 .searchbar{
-    margin: 0 20px;
-    margin-top: 37px;
+    margin: 0 1vw;
+    margin-top: 1.5vw;
     display: grid;
     grid-template-columns: 10% 90%;
 }
 
 .pfp{
-    margin-top: 15px;
+    margin-top: 1vw;
     display: flex;
     justify-content: center;
 }
 
 .pfp img{
-    width: 200px;
+    width: 8vw;
     background: white;
     border-radius: 98px;
 }
 
 .name{
-    font-size: 30px;
+    font-size: 1.4vw;
     text-align: center;
 }
 
 .profession{
-    font-size: 20px;
+    font-size: 1vw;
     text-align: center;
     color: #404040;
 }
-
+.fav-icon img,.friend-icon img{
+    width: 1vw;
+}
 .action{
-    display:grid;
-    grid-template-columns: 50% 50% ;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
 }
 
 .icon{
     display:flex;
     justify-content:center;
-    padding: 30px;
+    padding: 1.4vw;
     filter: invert(68%) sepia(100%) saturate(143) hue-rotate(277deg);
 }
 
 
 .container{
-    margin-top: 7px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    height: 100px;
+    margin-top: 1vw;
+    width: 5vw;
+    height: 5vw;
     display: flex;
     justify-content: center;
     background: #f3e0ff;
     border: 1px solid #e8c6ff;
-    border-radius: 105px;
+    border-radius: 5vw;
     transition:all 0.5s ease-in-out;
 }
 
@@ -105,34 +110,33 @@
 .file-container{
     display:flex;
     width: 100%;
-    justify-content:center
+    justify-content:center;
+    gap: 1vw;
 }
 
 .options{
-    font-size: 13px;
-    margin-top: 9px;
+    color:#404040;
+    font-size: 0.76vw;
+    margin-top: 0.8vw;
 }
 
 
 .thumb{
-    font-size:13px;
+    font-size:0.7vw;
     display:flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    height:25px;
-    width:25px;
-    border-radius:8px;
+    padding: 1.2vw;
+    height:1vw;
+    width:1vw;
+    border-radius:0.5vw;
     background-color: #e7c1ff;
-    margin-right: 20px;
     border: 0px;
     border: 2px solid #e2b3ff;
     transition: all 0.5s ease
 }
-.thumb:last-child{
-    margin-right: 0px;
-}
+
 
 .thumb:hover{
     cursor: pointer;
@@ -143,11 +147,12 @@
 .btn{
     cursor: pointer;
     background: none;
-    border: 2px solid #9900ff;
+    border: 0.1vw solid #9900ff;
     color: #9900ff;
-    padding: 8px;
+    padding: 0.5vw;
+    font-size: 0.9vw;
     width: 28%;
-    border-radius: 36px;
+    border-radius: 2vw;
     transition: all 0.5s ease-in-out;
 }
 
@@ -157,36 +162,259 @@
 }
 
 .view-btn{
-    margin-top: 40px;
+    margin-top: 1.5vw;
     display:flex;
     justify-content: center;
 }
 
 .attach-title{
-    margin: 0 40px;
-    font-size: 18px;
+    margin: 0 2vw;
+    font-size: 1.1vw;
     margin-bottom: 15px;
     margin-top: 30px;
 }
 
 .fav,.viewfriends{
     display: flex;
-    margin: 0 40px;
+    margin: 0 2vw;
     align-items: center;
     align-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
+    gap: 1vw;
 }
 
 .fav-icon,.friend-icon{
     display:flex;
 }
 
-.sub{
-    margin-left: 12px;
-}
-
 .footer p{
+    font-size: 1vw;
     text-align: center;
 }
 
+
+
+@media only screen and (max-width:414px){
+    .close-icon{
+        display:block;
+        position: fixed;
+        right: 0;
+        margin: 20px;
+    }
+
+    .file-container{
+    gap: 2vw;
+    }
+
+    .close-icon img{
+        width:4.5vw;
+        filter: invert(30%)
+    }
+        
+    .searchbar{
+        margin: 0 5vw;
+        margin-top: 14vw;
+    }
+
+    .searchbar input[type='text']{
+        width: 100%;
+        border-radius: 0 4vw 4vw 0;
+        height: 10vw
+    }
+
+    .search-btn{
+        border-radius: 4vw 0px 0px 4vw;
+    }
+
+    .search-icon{
+        width: 4vw;
+        padding-left: 2.2vw;
+    }
+
+
+    .pfp{
+        margin-top: 5vw;
+    }
+
+    .pfp img{
+        width:30vw
+    }
+
+    .name{
+        margin-top: 2vw;
+        font-size: 6vw;
+    }
+    
+    .profession{
+        font-size: 4vw;
+    }
+
+    .fav,.viewfriends{
+        gap: 4vw;
+    }
+
+    .fav-icon img,.friend-icon img{
+        width: 4vw;
+    }
+
+    .container{
+        margin-top: 5vw;
+        width: 20vw;
+        height: 20vw;
+        border-radius:10vw;
+    }
+    .icon{
+        display:flex;
+        justify-content:center;
+        padding: 4vw;
+    }
+
+    .options{
+        font-size: 4vw;
+        margin: 0 5vw;
+        color:#404040;
+        margin-top: 11vw;  
+    }
+    
+    .thumb{
+        height:24vw;
+        width:18vw;
+        font-size: 3vw;
+    }
+
+    .file-container{
+        margin-top: 2vw;
+    }
+
+    .attach-title{
+        margin: 0 5vw;
+        margin-top: 8vw;
+        font-size: 5vw;
+    }
+
+    .btn{
+        margin-top: 4vw;
+        font-size: 4vw;
+        padding: 1.2vw;
+        border-radius:5vw;
+    }
+
+    .footer p{
+        font-size: 4vw;
+        color:#404040;
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .close-icon{
+        display:block;
+        position: fixed;
+        right: 0;
+        margin: 20px;
+    }
+
+
+    .file-container{
+    gap: 2vw;
+    }
+
+    .close-icon img{
+        width:3vw;
+        filter: invert(30%)
+    }
+        
+    .searchbar{
+        margin: 0 5vw;
+        margin-top: 8vw;
+    }
+
+    .searchbar input[type='text']{
+        width: 100%;
+        border-radius: 0 4vw 4vw 0;
+        height: 5vw
+    }
+
+    .search-btn{
+        border-radius: 4vw 0px 0px 4vw;
+    }
+
+    .search-icon{
+        width: 3vw;
+        padding-left: 2.2vw;
+    }
+
+
+    .pfp{
+        margin-top: 3vw;
+    }
+
+    .pfp img{
+        width:25vw
+    }
+
+    .name{
+        margin-top: 2vw;
+        font-size: 4vw;
+    }
+    
+    .profession{
+        font-size: 3vw;
+    }
+
+    .fav,.viewfriends{
+        gap: 3vw;
+    }
+
+    .fav-icon img,.friend-icon img{
+        width: 2vw;
+    }
+
+    .container{
+        margin-top: 2vw;
+        width: 15vw;
+        height: 15vw;
+        border-radius:10vw;
+    }
+    .icon{
+        display:flex;
+        justify-content:center;
+        padding: 4vw;
+    }
+
+    .options{
+        font-size: 2.5vw;
+        margin: 0 5vw;
+        color:#404040;
+        margin-top: 12vw;  
+    }
+    
+    .thumb{
+        height:15vw;
+        width:18vw;
+        font-size: 3vw;
+    }
+
+    .file-container{
+        margin-top: 2vw;
+    }
+
+    .attach-title{
+        margin: 0 5vw;
+        margin-top: 8vw;
+        font-size: 4vw;
+    }
+
+    .btn{
+        margin-top: 2vw;
+        font-size: 3vw;
+        padding: 0.5vw;
+        border-radius:5vw;
+    }
+
+    .footer p{
+        font-size: 2.4vw;
+        color:#404040;
+    }
+
+}
 

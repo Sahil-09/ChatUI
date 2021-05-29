@@ -13,14 +13,14 @@
 
 .searchbar input[type='text']{
     width: 100%;
-    border-radius: 0 22px 22px 0;
+    border-radius: 0 1vw 1vw 0;
     border: none;
     outline: none;
 }
 
 
 .searchbar{
-    margin: 0 20px;
+    margin: 0 1vw;
     display:grid;
     grid-template-columns: 10% 90%;
 }
@@ -30,33 +30,37 @@
     width: 100%;
     text-align: center;
     background-color: white;
-    border-radius: 22px 0px 0px 22px;
+    border-radius: 1vw 0px 0px 1vw;
 }
 
 .search-icon{
-    width: 20px;
+    width: 1vw;
     display: flex;
     position: relative;
     text-align: center;
     align-content: center;
     cursor: pointer;
-    padding: 12px;
+    padding: 0.6vw;
     filter: invert(0.5);
 }
 
 .profile-container{
     display:flex;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 1vw;
 }
 
 .profile-pic{
-    width: 90px;
-    height: 90px;
+    width: 5vw;
+    height: 5vw;
     background: rgb(255, 255, 255);
-    border-radius: 58px;
+    border-radius: 3vw;
     text-align: center;
     align-content: center;
+}
+
+.profile-pic img{
+    width:5vw;
 }
 
 .detail-container{
@@ -65,12 +69,13 @@
 }
 
 .profile-name{
-    font-size: 1.5rem;
+    font-size: 1.4vw;
     font-weight: 700;
     color: rgb(153, 0, 255);
 }
 
 .profile-profession{
+    font-size: 1.15vw;
     color:rgb(77, 77, 77)
 }
 
@@ -80,25 +85,25 @@
 
 .edit-icon img{
     cursor: pointer;
-    width:15px;
+    width:0.8vw;
     margin: 0 auto;
 }
 
 .list{
-    height:70px;
-    width:70px
+    height:4vw;
+    width:4vw;
 }
 
 .contact-container{
     display:grid;
-    grid-template-columns: 20% 80%;
-    margin-bottom: 20px;
+    grid-template-columns: 25% 75%;
+    margin-bottom: 1vw;
     cursor: pointer;
 }
 
 .chat-list{
-    margin:0 20px;
-    margin-top:40px;
+    margin:0 1vw;
+    margin-top:1.2vw;
     overflow-x: scroll;
 }
 
@@ -107,8 +112,12 @@
     grid-template-columns:70% 30%
 }
 
+.main-info{
+    font-size: 0.9vw;
+}
+
 .chat{
-    font-size: 13px;
+    font-size: calc(2px + 0.6vw);
     color: rgb(77, 77, 77);
     display:-webkit-box;
     -webkit-line-clamp: 2;
@@ -125,20 +134,20 @@
 }
 
 .stats{
-    padding: 5px;
-    font-size: 13px;
+    padding: 0.3vw;
+    font-size: 0.7vw;
     display:flex;
-    width:10px;
-    height:10px;
+    width:0.5vw;
+    height:0.5vw;
     justify-content: center;
-    border-radius:15px;
+    border-radius:1vw;
     color: white;
     align-items: center;
     background:rgb(153, 0, 255)
 }
 
 .chat-snap{
-    margin-top:5px
+    margin-top:0.1vw
 }
 
 .name{
@@ -151,3 +160,325 @@
     filter:invert(30%) sepia(80) saturate(14) hue-rotate(237deg)
 }
 
+
+
+@media only screen and (max-width:415px){
+    .chat-container{
+        display:grid;
+        grid-template-rows: 10% 5% 75%;
+        height:100vh;
+        background:#f1f1f1;
+    }
+
+    .searchbar input[type='text']{
+            width:98%;
+            border-radius: 0 18vw 18vw 0;
+    }
+
+    .searchbar{
+        margin: 0 3vw;
+        display:grid;
+        grid-template-columns:14% 86%;
+    }
+
+    .search-btn{
+        display:flex;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        border-radius: 18vw 0px 0px 18vw;
+    }
+    
+    .search-icon{
+        width: 3vw;
+        display: flex;
+        position: relative;
+        text-align: center;
+        align-content: center;
+        cursor: pointer;
+        padding: 1vw;
+        filter: invert(0.5);
+    }
+
+
+    .profile-container{
+        margin: 0 3vw;
+    }
+
+
+    .profile-pic{
+        width: 12vw;
+        height: 12vw;
+        border-radius: 10vw;
+    }
+
+    .profile-pic img{
+        width: 12vw !important;
+    }
+    .list{
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .list img{
+        width: 10vw !important;
+    }
+
+    .profile-profession{
+        font-size: 3.5vw;
+    }
+
+
+    .profile-name{
+        font-size: 3.4vw;
+        font-weight: 700;
+        color: rgb(153, 0, 255);
+    }
+
+    .chat-list{
+        margin: 0 2vw;
+        margin-top: 3vw;
+    }
+
+    .chat{
+        font-size: 2.5vw;
+    }
+
+    .main-info{
+        font-size:2.6vw
+    }
+
+    .chat-snap{
+        margin-top: 0.4vw;
+    }
+    .contact-container{
+        margin-bottom: 4vw;
+    }
+
+    .stats{
+        padding: 1.5vw;
+        font-size: 2vw;
+        border-radius:3vw;
+    }
+
+    .edit-icon img{
+        width:2.5vw;
+    }
+
+
+    
+}
+@media only screen and (max-width:1024px){
+    .chat-container{
+        display:grid;
+        grid-template-rows: 10% 5% 75%;
+        height:100vh;
+        background:#f1f1f1;
+    }
+
+    .searchbar input[type='text']{
+            width:98%;
+            border-radius: 0 18vw 18vw 0;
+    }
+
+    .searchbar{
+        margin: 0 3vw;
+        display:grid;
+        grid-template-columns:14% 86%;
+    }
+
+    .search-btn{
+        display:flex;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        border-radius: 18vw 0px 0px 18vw;
+    }
+    
+    .search-icon{
+        width: 3vw;
+        display: flex;
+        position: relative;
+        text-align: center;
+        align-content: center;
+        cursor: pointer;
+        padding: 1vw;
+        filter: invert(0.5);
+    }
+
+
+    .profile-container{
+        margin: 0 3vw;
+    }
+
+
+    .profile-pic{
+        width: 12vw;
+        height: 12vw;
+        border-radius: 10vw;
+    }
+
+    .profile-pic img{
+        width: 12vw !important;
+    }
+    .list{
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .list img{
+        width: 10vw !important;
+    }
+
+    .profile-profession{
+        font-size: 3.5vw;
+    }
+
+
+    .profile-name{
+        font-size: 3.4vw;
+        font-weight: 700;
+        color: rgb(153, 0, 255);
+    }
+
+    .chat-list{
+        margin: 0 2vw;
+        margin-top: 3vw;
+    }
+
+    .chat{
+        font-size: 2.5vw;
+    }
+
+    .main-info{
+        font-size:2.6vw
+    }
+
+    .chat-snap{
+        margin-top: 0.4vw;
+    }
+    .contact-container{
+        margin-bottom: 4vw;
+    }
+
+    .stats{
+        padding: 1.5vw;
+        font-size: 2vw;
+        border-radius:3vw;
+    }
+
+    .edit-icon img{
+        width:2.5vw;
+    }
+
+
+    
+}
+
+
+/* @media only screen and (max-width:375px){
+    .chat-container{
+        display:grid;
+        grid-template-rows: 10% 5% 75%;
+        height:100vh;
+        background:#f1f1f1;
+    }
+
+    .searchbar input[type='text']{
+            width:98%;
+            border-radius: 0 18vw 18vw 0;
+    }
+
+    .searchbar{
+        margin: 0 3vw;
+        display:grid;
+        grid-template-columns:14% 86%;
+    }
+
+    .search-btn{
+        display:flex;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        border-radius: 18vw 0px 0px 18vw;
+    }
+    
+    .search-icon{
+        width: 3vw;
+        display: flex;
+        position: relative;
+        text-align: center;
+        align-content: center;
+        cursor: pointer;
+        padding: 1vw;
+        filter: invert(0.5);
+    }
+
+
+    .profile-container{
+        margin: 0 3vw;
+    }
+
+
+    .profile-pic{
+        width: 12vw;
+        height: 12vw;
+        border-radius: 10vw;
+    }
+
+    .profile-pic img{
+        width: 12vw !important;
+    }
+    .list{
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .list img{
+        width: 10vw !important;
+    }
+
+    .profile-profession{
+        font-size: 3.5vw;
+    }
+
+
+    .profile-name{
+        font-size: 3.4vw;
+        font-weight: 700;
+        color: rgb(153, 0, 255);
+    }
+
+    .chat-list{
+        margin: 0 2vw;
+        margin-top: 3vw;
+    }
+
+    .chat{
+        font-size: 2.5vw;
+    }
+
+    .main-info{
+        font-size:2.6vw
+    }
+
+    .chat-snap{
+        margin-top: 0.4vw;
+    }
+    .contact-container{
+        margin-bottom: 4vw;
+    }
+
+    .stats{
+        padding: 1.5vw;
+        font-size: 2vw;
+        border-radius:3vw;
+    }
+
+    .edit-icon img{
+        width:2.5vw;
+    }
+
+
+    
+} */

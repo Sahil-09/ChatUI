@@ -12,7 +12,7 @@
 
 .head-container {
   display: flex;
-  margin: 0 50px;
+  margin: 0 1.5vw;
   align-items: center;
   border-bottom: 1px solid rgb(211, 211, 211);
 }
@@ -21,23 +21,27 @@
   margin-left: auto;
   margin-right: auto;
   background: rgb(243, 243, 243);
-  border-radius: 120px;
+  border-radius: 3vw;
+}
+
+.pfp img{
+  width: 4.5vw
 }
 
 .name {
   display: flex;
-  font-size: 36px;
+  font-size: 2vw;
   font-weight: 400;
   align-items: center;
 }
 
 .circle {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 0.9vw;
+  height: 0.9vw;
   background: rgb(3, 218, 3);
-  border-radius: 30px;
-  margin-left: 20px;
+  border-radius: 5vw;
+  margin-left: 0.6vw;
 }
 
 .icons-container {
@@ -47,7 +51,8 @@
 
 .icons-container img {
   filter: invert(40%);
-  margin-right: 30px;
+  margin-right: 2.5vw;
+  width: 1.4vw
 }
 
 .main-chat {
@@ -58,44 +63,44 @@
 
 
 .main-container {
-  margin: 0 25px;
-  margin-top: 20px;
+  margin: 0 1.5vw;
+  margin-top: 1vw;
 }
 
 .reciever-msg {
-  padding: 10px;
+  padding: 0.7vw;
   float: right;
+  font-size: 0.8vw;
   max-width: 40%;
   color: white;
   background: rgb(153, 0, 255);
-  border-radius: 10px 10px 0px 10px;
-  margin-bottom: 16px;
+  border-radius: 1vw 1vw 0px 1vw;
+  margin-bottom: 0.7vw;
 }
 
-.sender-msg {
-  padding: 10px;
-  float: left;
-  max-width: 40%;
-  color: rgb(20, 20, 20);
-  background: rgb(243, 243, 243);
-  border-radius: 10px 10px 10px 0px;
-  margin-bottom: 16px;
-}
 
 .reciever {
   width: 100%;
   float: right;
 }
 
+
 .sender {
   width: 100%;
   float: left;
 }
 
+.send{
+  float: left;
+  color: rgb(20, 20, 20);
+  background: rgb(243, 243, 243);
+  border-radius: 1vw 1vw 1vw 0vw;
+}
+
 .reply-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1vw;
 }
 
 .reply {
@@ -104,80 +109,60 @@
 
 .mic-icon {
   display: flex;
-  padding: 10px;
-  padding-left: 11px;
+  padding: 0.7vw;
+  padding-left: 0.7vw;
   background: rgb(243, 243, 243);
   border-radius: 30px 0px 0px 30px;
 }
 
 .mic-icon img {
   cursor: pointer;
-  padding: 6px;
+  padding: 0.1vw;
   filter: invert(30%);
-  width: 24px;
+  width: 1.3vw;
 }
 
 .message {
   background: rgb(243, 243, 243);
+  font-family: 'Nunito', sans-serif;
   border: none;
   outline: none;
   width: 61%;
-  padding-left: 8px;
+  padding-left: 0.3vw;
 }
 
-.attach-icon {
+.attach-icon,.camera-icon,.emoji{
   display: flex;
-  padding: 7px;
+  padding: 0.7vw;
   background: rgb(243, 243, 243);
 }
-.attach-icon img {
+.attach-icon img,.camera-icon img,.emoji img {
   cursor: pointer;
-  padding: 6px;
+  padding: 0.1vw;
   filter: invert(30%);
-  width: 24px;
+  width: 1.3vw;
 }
 
-.camera-icon {
-  display: flex;
-  padding: 7px;
-  background: rgb(243, 243, 243);
-}
-
-.camera-icon img {
-  cursor: pointer;
-  padding: 6px;
-  width: 24px;
-  filter: invert(24%);
-}
 
 .emoji {
   display: flex;
-  padding: 7px;
+  padding: 0.7vw;
   background: rgb(243, 243, 243);
-  padding-right: 57px;
-  border-radius: 0 20px 20px 0;
-}
-
-.emoji img {
-  cursor: pointer;
-  padding: 6px;
-  filter: invert(30%);
-  width: 24px;
+  padding-right: 3.5vw;
+  border-radius: 0 1vw 1vw 0;
 }
 
 .send-btn{
-    padding: 8px;
+    padding: 0.4vw;
     position: relative;
-    z-index: 1;
     display: flex;
-    right: 52px;
-    right: 1;
-    width: 39px;
+    right: 2.8vw;
+    width: 2.1vw;
+    height: 2.1vw;
     text-align: center;
     align-items: center;
-    height: 39px;
     background: #9900ff;
-    border-radius: 101px;
+    border-radius: 5vw;
     transition: 0.5s all;
 }
 
@@ -189,12 +174,199 @@
 
 .send-btn img{
     cursor: pointer;
-    width: 24px;
-    padding: 6px;
+    width: 1.3vw;
+    padding: 0.1vw;
     filter: invert(1);
-    padding-left: 10px;
+    padding-left: 0.5vw;
 }
 
+
+@media only screen and (max-width:415px){
+
+  .chat-container {
+    display: grid;
+    grid-template-rows: 10% 81% 9%;
+    height: 100vh;
+  }
+
+  .head-container{
+    margin: 0 13vw;
+  }
+
+  .pfp img{
+    width: 10vw;
+  }
+
+  .pfp{
+    border-radius: 6vw;
+  }
+
+  .name{
+    font-size:5vw
+  }
+
+  .head-name{
+    grid-template-columns: 20% 57% 22%;
+  }
+
+  .circle {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .icons-container img {
+    margin-right: 2.5vw;
+    width: 2.8vw
+  }
+
+  .main-container {
+    margin: 0 4vw;
+    margin-top: 4vw;
+  }
+
+  .reciever-msg {
+    padding: 1.3vw;
+    float: right;
+    font-size: 3.6vw;
+    max-width: 55%;
+    margin-bottom: 3vw;
+  }
+
+  .send{
+    float: left;
+    color: rgb(20, 20, 20);
+    background: rgb(243, 243, 243);
+    border-radius: 1vw 1vw 1vw 0vw;
+  }
+  .reply-container {
+    justify-content:unset;
+    margin:0 6vw;
+    margin-top: 2vw;
+  }
+
+  .mic-icon,.attach-icon,.camera-icon,.emoji{
+    padding:2.5vw
+  }
+
+  .emoji{
+    padding-right: 6vw;
+  }
+
+  .mic-icon img,.attach-icon img,.camera-icon img,.emoji img{
+    width: 6vw;
+  }
+
+  .message {
+    width:35%
+  }
+  .send-btn{
+    width: 8vw;
+    height: 8vw;
+    padding: 2vw;
+    right: 2.8vw;
+    border-radius: 8vw;
+  }
+
+  .send-btn img{
+    width: 4vw;
+    padding: 1vw;
+    padding-left: 2vw;
+  }
+
+}
+@media only screen and (max-width:1024px){
+
+  .chat-container {
+    display: grid;
+    grid-template-rows: 10% 81% 9%;
+    height: 100vh;
+  }
+
+  .head-container{
+    margin: 0 13vw;
+  }
+
+  .pfp img{
+    width: 10vw;
+  }
+
+  .pfp{
+    border-radius: 6vw;
+  }
+
+  .name{
+    font-size:5vw
+  }
+
+  .head-name{
+    grid-template-columns: 20% 57% 22%;
+  }
+
+  .circle {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .icons-container img {
+    margin-right: 2.5vw;
+    width: 2.8vw
+  }
+
+  .main-container {
+    margin: 0 4vw;
+    margin-top: 4vw;
+  }
+
+  .reciever-msg {
+    padding: 1.3vw;
+    float: right;
+    font-size: 3.6vw;
+    max-width: 55%;
+    margin-bottom: 3vw;
+  }
+
+  .send{
+    float: left;
+    color: rgb(20, 20, 20);
+    background: rgb(243, 243, 243);
+    border-radius: 1vw 1vw 1vw 0vw;
+  }
+  .reply-container {
+    justify-content:unset;
+    margin:0 6vw;
+    margin-top: 2vw;
+  }
+
+  .mic-icon,.attach-icon,.camera-icon,.emoji{
+    padding:2.5vw
+  }
+
+  .emoji{
+    padding-right: 6vw;
+  }
+
+  .mic-icon img,.attach-icon img,.camera-icon img,.emoji img{
+    width: 6vw;
+  }
+
+  .message {
+    width:35%
+  }
+  .send-btn{
+    width: 8vw;
+    height: 8vw;
+    padding: 2vw;
+    right: 2.8vw;
+    border-radius: 8vw;
+  }
+
+  .send-btn img{
+    width: 4vw;
+    padding: 1vw;
+    padding-left: 2vw;
+  }
+
+}
 
 
 
