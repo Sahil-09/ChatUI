@@ -16,7 +16,6 @@
             "outputPath": "Backend/angular",
             "index": "src/index.html",
 	    "baseHref":"/project/",
-	    "deployUrl": "/project/",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",

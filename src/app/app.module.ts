@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-import {APP_BASE_HREF} from '@angular/common';
 
 
 
@@ -22,7 +21,6 @@ import { ProfileviewComponent } from './profileview/profileview.component';
     HttpClientModule
   ],
   providers: [
-{provide: APP_BASE_HREF, useValue: '/project'}
 ],
   bootstrap: [AppComponent]
 })
