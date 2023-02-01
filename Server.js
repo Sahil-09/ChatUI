@@ -7,9 +7,9 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://sahil:HTuU7ciTowPk08cs@cluster0.0hdw3.mongodb.net/chat?retryWrites=true&w=majority').
 then(()=>{
-    app.set('port',process.env.PORT || 3000);
-    server.listen(process.env.PORT || 3000,()=>{
-        console.log("\x1b[35m","Connected to database and server started at 3000!")
+    app.set('port',process.env.PORT || 4001);
+    server.listen(process.env.PORT || 4001,()=>{
+        console.log("Connected to database and server started at 4001!")
     })
 }).catch(err =>{
     console.log(err)

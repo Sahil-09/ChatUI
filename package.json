@@ -4,8 +4,11 @@
   "scripts": {
     "heroku-postbuild": "ng build --prod",
     "ng": "ng",
+    "version":"ng --version",
+    "update":"ng update",
+    "serve":"ng serve",
     "start": "node Server.js",
-    "build": "ng build",
+    "build": "ng build ---base-href /project/ --deploy-url /project/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
