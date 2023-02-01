@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "WoobChat"
+  "defaultProject": "WoobChat",
+  "cli": {
+    "analytics": false
+  }
 }
